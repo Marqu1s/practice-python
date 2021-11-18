@@ -1,0 +1,234 @@
+
+https://realpython.com/python-csv/
+https://www.youtube.com/watch?v=mkv5mxYu0Wk
+https://github.com/llSourcell/Learn_Data_Science_in_3_Months
+https://www.youtube.com/playlist?list=PLrRPvpgDmw0ngx_uPhvasTbOWLOztsaBj
+https://libguides.lib.fit.edu/opendata/sources
+https://www.freecodecamp.org/news/https-medium-freecodecamp-org-best-free-open-data-sources-anyone-can-use-a65b514b0f2d/
+https://towardsdatascience.com/9-distance-measures-in-data-science-918109d069fa
+https://brendankent.com/2021/03/09/free-sports-data-sources/
+
+FREE COURSES:
+
+Stats
+Khan Academy https://www.khanacademy.org/math/statistics-probability
+Data Pre-processing, Data Visualization, Exploratory Data Analysis
+EdX https://www.edx.org/course/introduction-to-computing-for-data-analysis
+Databases (SQL + NoSQL)
+Udacity https://www.udacity.com/course/intro-to-relational-databases--ud197
+EdX https://www.edx.org/course/introduction-to-nosql-data-solutions-2
+Hadoop & Map Reduce + Spark
+Udacity https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617
+Spark Workshop https://stanford.edu/~rezab/sparkclass/slides/itas_workshop.pdf
+Data Storytelling
+Edx https://www.edx.org/course/analytics-storytelling-impact-1
+
+Go heavy on the stats when preparing for a data science interview
+	
+Data analysis is all about visualization, programming, 
+
+---From Jordan Harrod Video
+Statistics Fundamentals (Brilliant): https://brilliant.org/courses/statistics/
+Intro to Probability and Statistics (MIT OCW): https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/
+6.434 (MIT) Statistics for Scientists and Engineers: http://web.mit.edu/fmkashif/spring_06_stat/6.434J-16.391J.htm
+6.436 (MIT) Fundamentals of Probability: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-436j-fundamentals-of-probability-fall-2018/
+Real Analysis (MIT OCW): https://ocw.mit.edu/courses/mathematics/18-100c-real-analysis-fall-2012/
+Calc, Linear Algebra, Differential Equations
+Optimization Theory
+fast.ai deep learning course
+MIT OpenCourseware
+Reimplement models like transformers
+Start with the problem and look at a broader suite of solutions + creativity
+-----------------------------------------------------------------------------------
+
+Books:
+Calculus Diaries
+Statistical Rethinking
+
+Stocks:
+Backtrader - python library
+Black Scholes options pricing
+
+
+POWERBI
+https://www.linkedin.com/pulse/i-dont-know-lot-simply-read-0-dimes-power-bi-resource-alex-powers
+
+ArcGIS:
+http://www.esri.com/~/media/Files/Pdfs/library/ebooks/new-geographers.pdf
+http://www.esri.com/~/media/Files/Pdfs/library/ebooks/understanding-earth.pdf
+http://www.esri.com/arcnews
+http://www.esri.com/arcuser
+http://www.esri.com/arcwatch
+http://www.veryspatial.com/podcast.php
+http://www.directionsmag.com/
+http://www.geoconnexion.com/geo.php
+http://www.geoconnexion.com/geoconnexionuk.php
+http://geospatialtoday.com/
+
+Visualization:
+https://www.amazon.com/The-Wall-Street-Journal-Guide-to-Information-Graphics-The-Dos-and-Don-ts-of-Presenting-Data-Facts-and-Figures/dp/0393347281/ref=cm_cr_dp_d_rvw_txt?ie=UTF8
+https://www.amazon.com/Information-Dashboard-Design-Displaying-Data-for-At-a-Glance-Monitoring/dp/1938377001/ref=cm_cr_dp_d_rvw_txt?ie=UTF8
+https://www.amazon.com/Show-Me-the-Numbers-Designing-Tables-and-Graphs-to-Enlighten/dp/0970601972/ref=cm_cr_dp_d_rvw_txt?ie=UTF8
+https://www.amazon.com/The-Truthful-Art-Data-Charts-and-Maps-for-Communication/dp/0321934075/ref=cm_cr_dp_d_rvw_txt?ie=UTF8
+https://www.amazon.com/Resonate-Present-Visual-Stories-that-Transform-Audiences/dp/0470632011/ref=cm_cr_dp_d_rvw_txt?ie=UTF8
+
+TOOLS*******************************************************************************
+https://www.evanmiller.org/ab-testing/
+http://vassarstats.net/newcs.html
+
+
+************************************************************************************
+
+Validation
+Validate your statistical analysis with chi squared tests
+______ Chi-Squared Test ______
+Tells us if the test result is just a random event or if it can be applied to the entire population.
+Has to be taken with absolute values, not percentages
+Designed to test the PROBABILITY OF INDEPENDENCE
+
+Observed table
+   Stayed   Exited  Total Exited/Total Sample Size = Expected Ratio
+M  4559     898      2037              10000       = .2037 or 20%
+F  3404     1139
+Expected table      Add up total males/females stayed/exited and divide it by 20% = Exited 
+   Stayed   Exited          (4559+898)*.2 = 1091                         
+M  4366     1091
+F  3634     909
+
+RealEstate Marketing:
+https://www.biggerpockets.com/blog/2014-08-26-ultimate-guide-real-estate-marketing-10-tools-generate-unlimited-leads
+
+Kaggle - Machine Learning Course Notes
+--------------------------------------
+Examine your data using .describe with pandas
+Look for anomalies and other ish
+
+pandas.read_csv()
+
+Data Features (what features you use to predict) = X
+Target (what variable you want to predict) = y
+
+-------scikit-learn library used to create models (sklearn)
+[from sklearn.tree import DecisionTreeRegressor] for a decision tree
+model = DecisionTreeRegressor(random_state=1)
+model.fit(train_X,train_y)
+model.predict(val_X)
+
+
+Building a Model
+1. Define
+	-What type of model, what parameters
+2. Fit
+	-Get patterns from provided data
+3. Predict
+4. Evaluate
+	-Determine how accurate the model's predictions are
+
+Mean Absolute Error (MAE) - a way of summarizing the model quality, how well the predictions match the actual
+
+Prediction Error = Actual - Predicted
+MEAN(|Actual - Predicted|) = Our predictions are, on average, about this much off
+		from sklearn.metrics import mean_absolute_error
+		mean_absolute_error(val_y, val_predictions)
+		
+		
+Validation Data is data we exclude from the data set to test against our trained model for accuracy. You can break the data set into two pieces then use 1 piece for training the model and the other for validating.
+
+
+---------The below code splits the data----
+from sklearn.model_selection import train_test_split
+train_X, val_X, train_y, val_y = train_test_split(X,y, random_state=0)
+
+Overfitting a model is when you define too many leaves or splits in the decision tree. This makes it very accurate in the training data but may not be as accurate when it comes to new predictions because the amount of data in a split is small.
+Underfitting is when the decision tree splits are very shallow, maybe 2 to 4 levels. This causes there to be too much varying data in a split essentially making it useless at predicting new values
+
+You want to find a happy medium between the too..not too many leaves and not too few.
+Defined in Kaggle----------->
+Overfitting: capturing spurious patterns that won't recur in the future, leading to less accurate predictions, or
+Underfitting: failing to capture relevant patterns, again leading to less accurate predictions.
+
+---example of comparing MAE using different leaf node values to hone in model accuracy------
+from sklearn.metrics import mean_absolute_error
+from sklearn.tree import DecisionTreeRegressor
+
+def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
+    model = DecisionTreeRegressor(max_leaf_nodes=max_leaf_nodes, random_state=0)
+    model.fit(train_X, train_y)
+    preds_val = model.predict(val_X)
+    mae = mean_absolute_error(val_y, preds_val)
+    return(mae)
+
+#the loop below is used for the comparison
+for max_leaf_nodes in [5, 50, 500, 5000]:
+    my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y)
+    print("Max leaf nodes: %d  \t\t Mean Absolute Error:  %d" %(max_leaf_nodes, my_mae))
+	
+------Random Forests-------
+This method uses multiple decision trees and makes a prediction by averaging the predictions of each of the component trees. This method is much more accurate than a single decision tree. It works well with default parameters...There may be something I learn about that works well when you don't have default parameters..maybe that has to do with unsupervised machine learning.
+
+***the  code
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error
+
+--------Missing Values------------
+An expected occurrence. Learn to deal with them. Will discuss some methods below.
+
+1) DROP the column with missing data
+	-But then you're losing out on possible features to increase the accuracy of your model.
+	- Could be a crucial column
+2) IMPUTATION
+	-fill in the missing values with a number (mean of the column)
+3) EXTENDED IMPUTATION
+	-A 2 step process where we fill in the missing data but also create a column to show where we filled in missing data. Sometimes this helps drasticly but other times it does not.
+	
+***the code to DROP
+Looking for missing columns
+# Get names of columns with missing values
+cols_with_missing = [col for col in X_train.columns
+                     if X_train[col].isnull().any()]
+
+# Drop columns in training and validation data
+reduced_X_train = X_train.drop(cols_with_missing, axis=1)
+reduced_X_valid = X_valid.drop(cols_with_missing, axis=1)
+
+***the code to IMPUTE
+# Imputation
+my_imputer = SimpleImputer()
+imputed_X_train = pd.DataFrame(my_imputer.fit_transform(X_train))
+imputed_X_valid = pd.DataFrame(my_imputer.transform(X_valid))
+
+# Imputation removed column names; put them back
+imputed_X_train.columns = X_train.columns
+imputed_X_valid.columns = X_valid.columns
+
+***the code for EXTENDED IMPUTATION
+# Make copy to avoid changing original data (when imputing)
+X_train_plus = X_train.copy()
+X_valid_plus = X_valid.copy()
+
+# Make new columns indicating what will be imputed
+for col in cols_with_missing:
+    X_train_plus[col + '_was_missing'] = X_train_plus[col].isnull()
+    X_valid_plus[col + '_was_missing'] = X_valid_plus[col].isnull()
+
+# Imputation
+my_imputer = SimpleImputer()
+imputed_X_train_plus = pd.DataFrame(my_imputer.fit_transform(X_train_plus))
+imputed_X_valid_plus = pd.DataFrame(my_imputer.transform(X_valid_plus))
+
+# Imputation removed column names; put them back
+imputed_X_train_plus.columns = X_train_plus.columns
+imputed_X_valid_plus.columns = X_valid_plus.columns
+
+# Remove rows with missing target, separate target from predictors
+X_full.dropna(axis=0, subset=['SalePrice'], inplace=True)
+y = X_full.SalePrice
+X_full.drop(['SalePrice'], axis=1, inplace=True)
+
+# To keep things simple, we'll use only numerical predictors
+X = X_full.select_dtypes(exclude=['object'])
+X_test = X_test_full.select_dtypes(exclude=['object'])
+
+# Number of missing values in each column of training data
+missing_val_count_by_column = (X_train.isnull().sum())
+print(missing_val_count_by_column[missing_val_count_by_column > 0])	
